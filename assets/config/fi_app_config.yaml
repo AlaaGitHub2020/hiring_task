@@ -1,0 +1,2 @@
+debug_api_url: "https://jsonplaceholder.typicode.com"
+release_api_url: "https://jsonplaceholder.typicode.com"

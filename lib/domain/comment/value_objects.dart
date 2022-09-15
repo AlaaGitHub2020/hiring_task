@@ -4,12 +4,14 @@ import 'package:hiring_task/domain/core/failures.dart';
 import 'package:hiring_task/domain/core/value_objects.dart';
 
 class Name extends ValueObject<String?> {
+  static const int maxNameLength = 700;
+  static const int minNameLength = 1;
   @override
   final Either<Failure<String?>, String?> value;
 
   factory Name(String? input) {
     return Name._(
-      validateName(input),
+      validateName(input, maxNameLength, minNameLength),
     );
   }
 
@@ -30,12 +32,14 @@ class Email extends ValueObject<String?> {
 }
 
 class Body extends ValueObject<String?> {
+  static const int maxNameLength = 5000;
+  static const int minNameLength = 1;
   @override
   final Either<Failure<String?>, String?> value;
 
   factory Body(String? input) {
     return Body._(
-      validateBody(input),
+      validateBody(input, maxNameLength, minNameLength),
     );
   }
 

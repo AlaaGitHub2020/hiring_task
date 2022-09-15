@@ -20,4 +20,6 @@ abstract class IDataRepository {
   Future<Either<AlbumFailure, List<Album>>> fetchAlbumsList();
 
   Future<Either<PhotoFailure, List<Photo>>> fetchPhotosList();
+
+  Future<Either<CommentFailure, Unit>> sendComment(Comment comment);
 }

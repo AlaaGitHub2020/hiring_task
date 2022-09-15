@@ -77,7 +77,7 @@ class UserRepository implements IUserRepository {
       });
       return right(user);
     } catch (e) {
-      log.e(e);
+      log.e("ERROR:$e");
       return left(const UserFailure.getUserDetailsFailure());
     }
   }

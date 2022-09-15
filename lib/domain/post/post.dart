@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hiring_task/domain/comment/comment.dart';
 import 'package:hiring_task/domain/core/entity.dart';
 import 'package:hiring_task/domain/core/value_objects.dart';
 import 'package:hiring_task/domain/post/value_objects.dart';
@@ -12,6 +13,7 @@ abstract class Post with _$Post implements IEntity {
     UniqueId? id,
     Title? title,
     Body? body,
+    List<Comment?>? commentsList,
   }) = _Post;
 
   factory Post.empty() => Post(
@@ -19,5 +21,6 @@ abstract class Post with _$Post implements IEntity {
         id: UniqueId(0),
         title: Title(''),
         body: Body(''),
+        commentsList: [],
       );
 }

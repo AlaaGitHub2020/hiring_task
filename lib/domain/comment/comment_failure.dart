@@ -8,4 +8,8 @@ abstract class CommentFailure with _$CommentFailure {
 
   const factory CommentFailure.fetchCommentsListFailure() =
       _FetchCommentsListFailure;
+
+  const factory CommentFailure.addNewCommentFailure() = _AddNewCommentFailure;
+
+  const factory CommentFailure.requiredData() = _RequiredData;
 }

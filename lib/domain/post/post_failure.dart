@@ -7,4 +7,6 @@ abstract class PostsFailure with _$PostsFailure {
   const factory PostsFailure.unexpected() = _Unexpected;
 
   const factory PostsFailure.fetchPostsListFailure() = _FetchPostsListFailure;
+
+  const factory PostsFailure.getPostDetailsFailure() = _GetPostDetailsFailure;
 }

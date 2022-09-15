@@ -33,6 +33,44 @@ class AppTheme {
         fontSize: 20,
       ),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.whiteColor1,
+      hintStyle: GoogleFonts.poppins(
+        color: AppColors.blackColor1,
+        fontWeight: FontWeight.w400,
+        fontSize: 18,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      border: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8),
+          ),
+          borderSide: BorderSide(
+            color: AppColors.blueColor1,
+            width: 1.0,
+          )),
+    ),
   );
 
   static final _darkTheme = ThemeData.dark().copyWith(
@@ -62,6 +100,44 @@ class AppTheme {
         fontWeight: FontWeight.w500,
         fontSize: 20,
       ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.whiteColor1,
+      hintStyle: GoogleFonts.poppins(
+        color: AppColors.blackColor1,
+        fontWeight: FontWeight.w400,
+        fontSize: 18,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        borderSide: BorderSide(
+          color: AppColors.blueColor1,
+          width: 1.0,
+        ),
+      ),
+      border: OutlineInputBorder(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(8),
+          ),
+          borderSide: BorderSide(
+            color: AppColors.blueColor1,
+            width: 1.0,
+          )),
     ),
   );
 

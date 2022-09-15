@@ -7,4 +7,6 @@ abstract class APIFailure with _$APIFailure {
   const factory APIFailure.unexpected() = _Unexpected;
 
   const factory APIFailure.failedToFetchData() = _FailedToFetchData;
+
+  const factory APIFailure.failedToPushData() = _FailedToPushData;
 }

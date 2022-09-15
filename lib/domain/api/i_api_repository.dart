@@ -5,4 +5,7 @@ import 'package:hiring_task/domain/api/api_failure.dart';
 abstract class IAPIRepository {
   Future<Either<APIFailure, Response>> getData(String endpoint,
       {Options? options});
+
+  Future<Either<APIFailure, Response>> postData(String endpoint,
+      {required data, Options? options});
 }

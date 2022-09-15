@@ -3,7 +3,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:hiring_task/application/posts/posts_list/posts_list_bloc.dart';
+import 'package:hiring_task/application/add_comment_form/add_comment_form_bloc.dart';
+import 'package:hiring_task/application/albums/albums_details_bloc.dart';
+import 'package:hiring_task/application/posts/post_details_bloc.dart';
 import 'package:hiring_task/application/theme_cubit/theme_cubit.dart';
 import 'package:hiring_task/application/user/user_details/user_details_bloc.dart';
 import 'package:hiring_task/application/user/users_list/users_list_bloc.dart';
@@ -24,10 +26,14 @@ class AppWidget extends StatelessWidget {
         ),
         BlocProvider<UsersListBloc>(
             create: (BuildContext context) => getIt<UsersListBloc>()),
-        BlocProvider<PostsListBloc>(
-            create: (BuildContext context) => getIt<PostsListBloc>()),
+        BlocProvider<PostDetailsBloc>(
+            create: (BuildContext context) => getIt<PostDetailsBloc>()),
         BlocProvider<UserDetailsBloc>(
             create: (BuildContext context) => getIt<UserDetailsBloc>()),
+        BlocProvider<AlbumsDetailsBloc>(
+            create: (BuildContext context) => getIt<AlbumsDetailsBloc>()),
+        BlocProvider<AddCommentFormBloc>(
+            create: (BuildContext context) => getIt<AddCommentFormBloc>()),
       ],
       child: const HiringTask(),
     );

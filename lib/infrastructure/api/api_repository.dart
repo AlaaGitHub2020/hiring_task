@@ -42,4 +42,19 @@ class APIRepository implements IAPIRepository {
       return left(const APIFailure.failedToFetchData());
     }
   }
+
+  @override
+  Future<Either<APIFailure, Response>> postData(String endpoint,
+      {required data, Options? options}) async {
+    try {
+      Response postDataResponse = await _dio.post(
+        endpoint,
+        data: data,
+      );
+      return right(postDataResponse);
+    } catch (e) {
+      log.e(e);
+      return left(const APIFailure.failedToPushData());
+    }
+  }
 }

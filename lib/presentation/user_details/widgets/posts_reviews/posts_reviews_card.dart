@@ -21,7 +21,7 @@ class PostsReviewsCard extends StatelessWidget {
             children: [
               const UserPostsReviewText(),
               PostsReviewsList(user: user),
-              const ViewMoreUserPostsBtn(),
+              ViewMoreUserPostsBtn(userPosts: user.postsList),
             ],
           ),
         ));

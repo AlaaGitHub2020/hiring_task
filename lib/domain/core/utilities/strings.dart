@@ -3,6 +3,8 @@ class Strings {
 
   ///Patterns (Pattern Start with p)
   static const String pExample = "(?=.*[A-Z])";
+  static const String pEmailPattern =
+      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
 
   ///Hero Tags (Pattern Start with t)
   static const String tExample = "ExampleTag";
@@ -27,4 +29,5 @@ class Strings {
   static const String eAPICommentsList = "/comments";
   static const String eAPIAlbumsList = "/albums";
   static const String eAPIPhotosList = "/photos";
+  static const String eAPISendComment = "/comments";
 }

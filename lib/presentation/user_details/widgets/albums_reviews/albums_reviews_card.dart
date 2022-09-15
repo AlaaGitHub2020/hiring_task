@@ -21,7 +21,7 @@ class AlbumsReviewsCard extends StatelessWidget {
             children: [
               const UserAlbumsReviewText(),
               AlbumsReviewsList(user: user),
-              const ViewMoreUserAlbumsBtn(),
+              ViewMoreUserAlbumsBtn(userAlbums: user.albumsList),
             ],
           ),
         ));

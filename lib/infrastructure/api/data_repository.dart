@@ -171,4 +171,31 @@ class DataRepository implements IDataRepository {
       return left(const PhotoFailure.fetchPhotosListFailure());
     }
   }
+
+  @override
+  Future<Either<CommentFailure, Unit>> sendComment(Comment comment) async {
+    try {
+      log.i("sendComment Started");
+      Either<APIFailure, Response> response = await _apiRepository.postData(
+        Strings.eAPISendComment,
+        data: {
+          "postId": comment.postId!.getOrCrash(),
+          "name": comment.name!.getOrCrash(),
+          "email": comment.email!.getOrCrash(),
+          "body": comment.body!.getOrCrash(),
+        },
+      );
+      log.i("response:$response");
+      return response.fold((apiFailure) {
+        return apiFailure.maybeMap(
+          failedToPushData: (_) =>
+              left(const CommentFailure.addNewCommentFailure()),
+          orElse: () => left(const CommentFailure.unexpected()),
+        );
+      }, (success) => right(unit));
+    } catch (e) {
+      log.e("ERROR:$e");
+      return left(const CommentFailure.unexpected());
+    }
+  }
 }
